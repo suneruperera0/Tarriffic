@@ -1,0 +1,1234 @@
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #1d1d1f;
+    --accent-color: #0071e3;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f7;
+    --border-color: #d2d2d7;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Styling */
+header {
+    background: var(--bg-primary);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.logo p {
+    display: none;
+}
+
+.logo i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--text-primary);
+}
+
+nav a.active {
+    color: var(--text-primary);
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--text-primary);
+    opacity: 0.2;
+}
+
+/* Buttons */
+.filter-btn, .time-filter, .view-all {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover, .time-filter:hover {
+    background: var(--border-color);
+    color: var(--text-primary);
+}
+
+.filter-btn.active, .time-filter.active {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.view-all {
+    background: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.view-all:hover {
+    background: #0077ed;
+}
+
+.news-action {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.news-action:hover {
+    color: var(--text-primary);
+}
+
+/* News Controls */
+.news-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.last-updated {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.news-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Market Data Controls */
+.data-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.time-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Remove old button styles */
+.filter-btn:focus, .time-filter:focus, .view-all:focus {
+    outline: none;
+}
+
+.filter-btn:active, .time-filter:active, .view-all:active {
+    transform: scale(0.98);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Market Overview */
+.market-overview {
+    grid-column: 1 / -1;
+}
+
+.overview-card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.metric-change {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+.metric-change.positive {
+    background-color: rgba(74, 222, 128, 0.1);
+    color: var(--accent-color);
+}
+
+.metric-change.negative {
+    background-color: rgba(248, 113, 113, 0.1);
+    color: var(--negative);
+}
+
+/* Main Content Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* News Feed Section */
+.news-feed {
+    background: var(--bg-primary);
+    border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.news-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-items {
+    padding: 1rem;
+}
+
+.news-item {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.news-item.featured {
+    background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary));
+    border: 1px solid var(--border-color);
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.tag.impact-high {
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+}
+
+.tag.impact-medium {
+    background: rgba(255, 149, 0, 0.1);
+    color: #ff9500;
+}
+
+.tag.sector {
+    background: rgba(52, 199, 89, 0.1);
+    color: #34c759;
+}
+
+.tag.ai-recommendation {
+    background: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+}
+
+.news-analysis {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+}
+
+.analysis-summary {
+    margin-bottom: 1rem;
+}
+
+.analysis-summary h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.trade-recommendations {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.recommendation-card {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-2px);
+}
+
+.recommendation-card.buy {
+    border-left: 4px solid #34c759;
+}
+
+.recommendation-card.sell {
+    border-left: 4px solid #ff3b30;
+}
+
+.recommendation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation-type {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.recommendation-card.buy .recommendation-type {
+    color: #34c759;
+}
+
+.recommendation-card.sell .recommendation-type {
+    color: #ff3b30;
+}
+
+.confidence-score {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.recommendation-content h5 {
+    margin: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.recommendation-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.recommendation-metrics .metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.recommendation-metrics .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+}
+
+.recommendation-metrics .value {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.recommendation-metrics .value.positive {
+    color: #34c759;
+}
+
+.recommendation-metrics .value.negative {
+    color: #ff3b30;
+}
+
+.market-impact {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.impact-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.impact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.impact-item .label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.impact-item .value {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.impact-item .value.positive {
+    color: #34c759;
+}
+
+.impact-item .value.negative {
+    color: #ff3b30;
+}
+
+.impact-item .value.neutral {
+    color: #ff9500;
+}
+
+.news-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.news-stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.news-stats .stat i {
+    color: var(--accent-color);
+}
+
+/* Market Data Section */
+.market-data {
+    background: var(--bg-primary);
+    border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.data-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.data-card h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.sector-list, .movers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sector-item, .mover-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.sector-name, .mover-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.sector-change, .mover-change {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.sector-change.positive, .mover-change.positive {
+    color: #34c759;
+}
+
+.sector-change.negative, .mover-change.negative {
+    color: #ff3b30;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.feature {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.feature p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Testimonial Section */
+.testimonial {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 4rem 0;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+cite {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .news-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+}
+
+/* Remove old hero styles */
+.hero {
+    display: none;
+}
+
+/* Portfolio and Watchlist Specific Styles */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.view-options, .time-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-option, .time-filter {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-option.active, .time-filter.active {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+}
+
+/* Table Styles */
+.table-container, .holdings-table {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.holding-item, .watchlist-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.watchlist-item {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.holding-item:hover, .watchlist-item:hover {
+    background-color: var(--secondary-color);
+}
+
+.asset-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.asset-name {
+    font-weight: 500;
+}
+
+.asset-type {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.change.positive {
+    color: var(--accent-color);
+}
+
+.change.negative {
+    color: var(--negative);
+}
+
+.impact.negative {
+    color: var(--negative);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+/* Allocation Chart */
+.allocation-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.allocation-chart {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    aspect-ratio: 1;
+}
+
+.allocation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.allocation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.allocation-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.allocation-bar {
+    height: 0.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+}
+
+/* Alerts Section */
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.alert-type {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.alert-type.high {
+    background-color: rgba(248, 113, 113, 0.1);
+    color: var(--negative);
+}
+
+.alert-type.medium {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.alert-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.alert-content p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.alert-action {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.alert-action:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+/* Active Navigation Link */
+nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+/* AI Insights Section */
+.ai-insights {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.insight-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Risk Analysis */
+.risk-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.risk-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.risk-bar {
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.risk-bar .bar-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+.risk-value {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.risk-summary {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Recommendations */
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recommendation-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.recommendation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation-type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.recommendation-type.buy {
+    background: rgba(52, 199, 89, 0.1);
+    color: #34c759;
+}
+
+.recommendation-type.sell {
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+}
+
+.recommendation-confidence {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.recommendation-content h4 {
+    margin: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.recommendation-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Tariff Impact Analysis */
+.analysis-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.impact-chart {
+    height: 200px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.impact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.impact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+}
+
+.impact-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.impact-value {
+    font-weight: 600;
+}
+
+.impact-value.negative {
+    color: #ff3b30;
+}
+
+.analysis-summary {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Market Sentiment */
+.sentiment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sentiment-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sentiment-bar {
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sentiment-bar .bar-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+.sentiment-value {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.sentiment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sentiment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sentiment-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.sentiment-value.positive {
+    color: #34c759;
+}
+
+.sentiment-value.negative {
+    color: #ff3b30;
+}
+
+.sentiment-value.neutral {
+    color: #ff9500;
+}
+
+/* Refresh Button */
+.refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+    background: var(--border-color);
+}
+
+.refresh-btn i {
+    color: var(--text-secondary);
+}

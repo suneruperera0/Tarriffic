@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariffic Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> Tariffic</h1>
+                <p>Navigate Tariffs, Optimize Investments</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="watchlist.html"><i class="fas fa-eye"></i> Watchlist</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Market Overview Section -->
+                <section class="market-overview">
+                    <div class="overview-card">
+                        <h3>Market Impact</h3>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-label">Affected Sectors</span>
+                                <span class="metric-value">12</span>
+                                <span class="metric-change positive">+2 today</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Active Tariffs</span>
+                                <span class="metric-value">48</span>
+                                <span class="metric-change negative">-3 this week</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Market Sentiment</span>
+                                <span class="metric-value">Neutral</span>
+                                <div class="sentiment-indicator">
+                                    <div class="sentiment-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Content Grid -->
+                <div class="main-content">
+                    <!-- News Feed Section -->
+                    <section class="news-feed">
+                        <div class="news-header">
+                            <h2><i class="fas fa-newspaper"></i> Latest Tariff Updates & AI Insights</h2>
+                            <div class="news-controls">
+                                <div class="last-updated">
+                                    <i class="fas fa-clock"></i> Last updated: 2 hours ago
+                                </div>
+                                <div class="news-filters">
+                                    <button class="filter-btn active">All</button>
+                                    <button class="filter-btn">High Impact</button>
+                                    <button class="filter-btn">Trade Ideas</button>
+                                    <button class="filter-btn">Market Analysis</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="news-items">
+                            <!-- High Impact News with Trade Recommendation -->
+                            <div class="news-item featured">
+                                <div class="news-content">
+                                    <div class="news-tags">
+                                        <span class="tag impact-high">High Impact</span>
+                                        <span class="tag sector">Electronics</span>
+                                        <span class="tag ai-recommendation">AI Trade Idea</span>
+                                    </div>
+                                    <h3>25% Tariff Imposed on Chinese Electronics</h3>
+                                    <p class="news-meta">US Department of Commerce • 2 hours ago</p>
+                                    
+                                    <div class="news-analysis">
+                                        <div class="analysis-summary">
+                                            <h4>AI Analysis</h4>
+                                            <p>The new tariff structure creates significant opportunities in domestic electronics manufacturing and alternative supply chains.</p>
+                                        </div>
+                                        
+                                        <div class="trade-recommendations">
+                                            <div class="recommendation-card buy">
+                                                <div class="recommendation-header">
+                                                    <span class="recommendation-type">Buy</span>
+                                                    <span class="confidence-score">92% Confidence</span>
+                                                </div>
+                                                <div class="recommendation-content">
+                                                    <h5>DomesticTech (DMTK)</h5>
+                                                    <p>Expected to benefit from increased domestic demand and supply chain shifts.</p>
+                                                    <div class="recommendation-metrics">
+                                                        <div class="metric">
+                                                            <span class="label">Target Price</span>
+                                                            <span class="value">$78.50</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Upside</span>
+                                                            <span class="value positive">+18.5%</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Timeframe</span>
+                                                            <span class="value">3-6 months</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="recommendation-card sell">
+                                                <div class="recommendation-header">
+                                                    <span class="recommendation-type">Sell</span>
+                                                    <span class="confidence-score">85% Confidence</span>
+                                                </div>
+                                                <div class="recommendation-content">
+                                                    <h5>ChinaElectronics (CEL)</h5>
+                                                    <p>Facing significant margin pressure due to new tariffs.</p>
+                                                    <div class="recommendation-metrics">
+                                                        <div class="metric">
+                                                            <span class="label">Current Price</span>
+                                                            <span class="value">$45.20</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Downside Risk</span>
+                                                            <span class="value negative">-12.3%</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Timeframe</span>
+                                                            <span class="value">1-3 months</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="market-impact">
+                                        <div class="impact-indicator">
+                                            <span class="impact-label">Market Impact:</span>
+                                            <span class="impact-value negative">-2.4%</span>
+                                        </div>
+                                        <div class="impact-details">
+                                            <div class="impact-item">
+                                                <span class="label">Sector Impact</span>
+                                                <span class="value negative">-3.2%</span>
+                                            </div>
+                                            <div class="impact-item">
+                                                <span class="label">Supply Chain</span>
+                                                <span class="value negative">-4.1%</span>
+                                            </div>
+                                            <div class="impact-item">
+                                                <span class="label">Consumer Prices</span>
+                                                <span class="value positive">+1.8%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="news-action">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+
+                            <!-- Market Analysis News -->
+                            <div class="news-item">
+                                <div class="news-content">
+                                    <div class="news-tags">
+                                        <span class="tag impact-medium">Market Analysis</span>
+                                        <span class="tag sector">Automotive</span>
+                                        <span class="tag ai-recommendation">AI Insights</span>
+                                    </div>
+                                    <h3>EU Considers New Tariffs on Electric Vehicles</h3>
+                                    <p class="news-meta">European Commission • 4 hours ago</p>
+                                    
+                                    <div class="news-analysis">
+                                        <div class="analysis-summary">
+                                            <h4>AI Analysis</h4>
+                                            <p>Potential shift in EV market dynamics could benefit domestic manufacturers and alternative suppliers.</p>
+                                        </div>
+                                        
+                                        <div class="trade-recommendations">
+                                            <div class="recommendation-card buy">
+                                                <div class="recommendation-header">
+                                                    <span class="recommendation-type">Buy</span>
+                                                    <span class="confidence-score">88% Confidence</span>
+                                                </div>
+                                                <div class="recommendation-content">
+                                                    <h5>EuroEV (EEV)</h5>
+                                                    <p>Positioned to capture market share from affected imports.</p>
+                                                    <div class="recommendation-metrics">
+                                                        <div class="metric">
+                                                            <span class="label">Target Price</span>
+                                                            <span class="value">$112.75</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Upside</span>
+                                                            <span class="value positive">+15.2%</span>
+                                                        </div>
+                                                        <div class="metric">
+                                                            <span class="label">Timeframe</span>
+                                                            <span class="value">6-12 months</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="market-impact">
+                                        <div class="impact-indicator">
+                                            <span class="impact-label">Market Impact:</span>
+                                            <span class="impact-value positive">+1.2%</span>
+                                        </div>
+                                        <div class="impact-details">
+                                            <div class="impact-item">
+                                                <span class="label">Sector Impact</span>
+                                                <span class="value positive">+2.1%</span>
+                                            </div>
+                                            <div class="impact-item">
+                                                <span class="label">Supply Chain</span>
+                                                <span class="value neutral">0.0%</span>
+                                            </div>
+                                            <div class="impact-item">
+                                                <span class="label">Consumer Prices</span>
+                                                <span class="value negative">-0.8%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="news-action">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="news-footer">
+                            <button class="view-all">
+                                <span>View All Updates</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <div class="news-stats">
+                                <span class="stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    12 Trade Ideas Today
+                                </span>
+                                <span class="stat">
+                                    <i class="fas fa-bullseye"></i>
+                                    85% Accuracy Rate
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Market Data Section -->
+                    <section class="market-data">
+                        <div class="data-header">
+                            <h2><i class="fas fa-chart-bar"></i> Market Data</h2>
+                            <div class="time-filters">
+                                <button class="time-filter active">1D</button>
+                                <button class="time-filter">1W</button>
+                                <button class="time-filter">1M</button>
+                                <button class="time-filter">1Y</button>
+                            </div>
+                        </div>
+                        <div class="data-grid">
+                            <div class="data-card">
+                                <h4>Most Affected Sectors</h4>
+                                <div class="sector-list">
+                                    <div class="sector-item">
+                                        <span class="sector-name">Electronics</span>
+                                        <span class="sector-change negative">-2.4%</span>
+                                    </div>
+                                    <div class="sector-item">
+                                        <span class="sector-name">Automotive</span>
+                                        <span class="sector-change positive">+1.2%</span>
+                                    </div>
+                                    <div class="sector-item">
+                                        <span class="sector-name">Steel</span>
+                                        <span class="sector-change negative">-1.8%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-card">
+                                <h4>Top Movers</h4>
+                                <div class="movers-list">
+                                    <div class="mover-item">
+                                        <span class="mover-name">TechCorp</span>
+                                        <span class="mover-change negative">-5.2%</span>
+                                    </div>
+                                    <div class="mover-item">
+                                        <span class="mover-name">AutoGlobal</span>
+                                        <span class="mover-change positive">+3.8%</span>
+                                    </div>
+                                    <div class="mover-item">
+                                        <span class="mover-name">SteelWorks</span>
+                                        <span class="mover-change negative">-4.1%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tariffic. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

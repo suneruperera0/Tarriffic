@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tariffic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> Tariffic</h1>
+                <p>Navigate Tariffs, Optimize Investments</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="portfolio.html" class="active"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="watchlist.html"><i class="fas fa-eye"></i> Watchlist</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Portfolio Overview -->
+                <section class="portfolio-overview">
+                    <div class="overview-card">
+                        <h2>Portfolio Overview</h2>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-label">Total Value</span>
+                                <span class="metric-value">$245,678</span>
+                                <span class="metric-change positive">+2.4% today</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Daily Change</span>
+                                <span class="metric-value">+$5,789</span>
+                                <span class="metric-change positive">+2.4%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Tariff Impact</span>
+                                <span class="metric-value">-$1,234</span>
+                                <span class="metric-change negative">-0.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Portfolio Holdings -->
+                <section class="portfolio-holdings">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-pie"></i> Your Holdings</h2>
+                        <div class="view-options">
+                            <button class="view-option active">All</button>
+                            <button class="view-option">Stocks</button>
+                            <button class="view-option">ETFs</button>
+                            <button class="view-option">Bonds</button>
+                        </div>
+                    </div>
+
+                    <div class="holdings-table">
+                        <div class="table-header">
+                            <div class="col">Asset</div>
+                            <div class="col">Shares</div>
+                            <div class="col">Avg. Cost</div>
+                            <div class="col">Current Price</div>
+                            <div class="col">Value</div>
+                            <div class="col">Change</div>
+                            <div class="col">Tariff Impact</div>
+                        </div>
+
+                        <div class="holding-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">TechCorp</span>
+                                    <span class="asset-type">Stock</span>
+                                </div>
+                            </div>
+                            <div class="col">100</div>
+                            <div class="col">$150.25</div>
+                            <div class="col">$165.80</div>
+                            <div class="col">$16,580</div>
+                            <div class="col change positive">+10.3%</div>
+                            <div class="col impact negative">-$234</div>
+                        </div>
+
+                        <div class="holding-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">Global ETF</span>
+                                    <span class="asset-type">ETF</span>
+                                </div>
+                            </div>
+                            <div class="col">50</div>
+                            <div class="col">$245.60</div>
+                            <div class="col">$238.90</div>
+                            <div class="col">$11,945</div>
+                            <div class="col change negative">-2.7%</div>
+                            <div class="col impact negative">-$567</div>
+                        </div>
+
+                        <div class="holding-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">SteelWorks</span>
+                                    <span class="asset-type">Stock</span>
+                                </div>
+                            </div>
+                            <div class="col">200</div>
+                            <div class="col">$45.30</div>
+                            <div class="col">$42.15</div>
+                            <div class="col">$8,430</div>
+                            <div class="col change negative">-7.0%</div>
+                            <div class="col impact negative">-$433</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Portfolio Allocation -->
+                <section class="portfolio-allocation">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-pie"></i> Portfolio Allocation</h2>
+                        <div class="time-filters">
+                            <button class="time-filter active">1D</button>
+                            <button class="time-filter">1W</button>
+                            <button class="time-filter">1M</button>
+                        </div>
+                    </div>
+
+                    <div class="allocation-grid">
+                        <div class="allocation-chart">
+                            <!-- Placeholder for pie chart -->
+                            <div class="chart-placeholder"></div>
+                        </div>
+                        <div class="allocation-details">
+                            <div class="allocation-item">
+                                <div class="allocation-info">
+                                    <span class="allocation-label">Technology</span>
+                                    <span class="allocation-value">45%</span>
+                                </div>
+                                <div class="allocation-bar">
+                                    <div class="bar-fill" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-info">
+                                    <span class="allocation-label">Manufacturing</span>
+                                    <span class="allocation-value">30%</span>
+                                </div>
+                                <div class="allocation-bar">
+                                    <div class="bar-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-info">
+                                    <span class="allocation-label">Energy</span>
+                                    <span class="allocation-value">15%</span>
+                                </div>
+                                <div class="allocation-bar">
+                                    <div class="bar-fill" style="width: 15%;"></div>
+                                </div>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="allocation-info">
+                                    <span class="allocation-label">Other</span>
+                                    <span class="allocation-value">10%</span>
+                                </div>
+                                <div class="allocation-bar">
+                                    <div class="bar-fill" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Insights Section -->
+                <section class="ai-insights">
+                    <div class="section-header">
+                        <h2><i class="fas fa-robot"></i> AI Insights & Recommendations</h2>
+                        <div class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> Refresh Analysis
+                        </div>
+                    </div>
+
+                    <div class="insights-grid">
+                        <!-- Portfolio Risk Analysis -->
+                        <div class="insight-card risk-analysis">
+                            <h3>Portfolio Risk Analysis</h3>
+                            <div class="risk-metrics">
+                                <div class="risk-metric">
+                                    <span class="metric-label">Tariff Exposure</span>
+                                    <div class="risk-bar">
+                                        <div class="bar-fill" style="width: 65%;"></div>
+                                    </div>
+                                    <span class="risk-value">65%</span>
+                                </div>
+                                <div class="risk-metric">
+                                    <span class="metric-label">Diversification Score</span>
+                                    <div class="risk-bar">
+                                        <div class="bar-fill" style="width: 45%;"></div>
+                                    </div>
+                                    <span class="risk-value">45%</span>
+                                </div>
+                            </div>
+                            <div class="risk-summary">
+                                <p>Your portfolio has high exposure to sectors affected by recent tariff changes. Consider diversifying into less impacted sectors.</p>
+                            </div>
+                        </div>
+
+                        <!-- AI Recommendations -->
+                        <div class="insight-card recommendations">
+                            <h3>AI Trading Recommendations</h3>
+                            <div class="recommendation-list">
+                                <div class="recommendation-item">
+                                    <div class="recommendation-header">
+                                        <span class="recommendation-type buy">Buy</span>
+                                        <span class="recommendation-confidence">85% Confidence</span>
+                                    </div>
+                                    <div class="recommendation-content">
+                                        <h4>TechCorp (TECH)</h4>
+                                        <p>Recent tariff changes have created a buying opportunity. Expected upside: 12-15%</p>
+                                        <div class="recommendation-metrics">
+                                            <span>Target Price: $185.00</span>
+                                            <span>Timeframe: 3 months</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommendation-item">
+                                    <div class="recommendation-header">
+                                        <span class="recommendation-type sell">Sell</span>
+                                        <span class="recommendation-confidence">78% Confidence</span>
+                                    </div>
+                                    <div class="recommendation-content">
+                                        <h4>SteelWorks (STL)</h4>
+                                        <p>New tariffs expected to impact margins significantly. Consider reducing exposure.</p>
+                                        <div class="recommendation-metrics">
+                                            <span>Current Price: $42.15</span>
+                                            <span>Risk Level: High</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tariff Impact Analysis -->
+                        <div class="insight-card tariff-analysis">
+                            <h3>Tariff Impact Analysis</h3>
+                            <div class="analysis-content">
+                                <div class="impact-chart">
+                                    <!-- Placeholder for impact visualization -->
+                                    <div class="chart-placeholder"></div>
+                                </div>
+                                <div class="impact-details">
+                                    <div class="impact-item">
+                                        <span class="impact-label">Direct Impact</span>
+                                        <span class="impact-value negative">-$1,234</span>
+                                    </div>
+                                    <div class="impact-item">
+                                        <span class="impact-label">Indirect Impact</span>
+                                        <span class="impact-value negative">-$567</span>
+                                    </div>
+                                    <div class="impact-item">
+                                        <span class="impact-label">Opportunity Cost</span>
+                                        <span class="impact-value negative">-$890</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="analysis-summary">
+                                <p>Recent tariff changes are expected to impact your portfolio by approximately 2.3%. Consider hedging strategies to mitigate risk.</p>
+                            </div>
+                        </div>
+
+                        <!-- Market Sentiment -->
+                        <div class="insight-card market-sentiment">
+                            <h3>Market Sentiment Analysis</h3>
+                            <div class="sentiment-content">
+                                <div class="sentiment-indicator">
+                                    <div class="sentiment-bar">
+                                        <div class="bar-fill" style="width: 35%;"></div>
+                                    </div>
+                                    <span class="sentiment-value">35% Bullish</span>
+                                </div>
+                                <div class="sentiment-details">
+                                    <div class="sentiment-item">
+                                        <span class="sentiment-label">Tariff News Impact</span>
+                                        <span class="sentiment-value negative">Negative</span>
+                                    </div>
+                                    <div class="sentiment-item">
+                                        <span class="sentiment-label">Sector Rotation</span>
+                                        <span class="sentiment-value positive">Positive</span>
+                                    </div>
+                                    <div class="sentiment-item">
+                                        <span class="sentiment-label">Market Volatility</span>
+                                        <span class="sentiment-value neutral">Neutral</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tariffic. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

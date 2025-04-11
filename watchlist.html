@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist - Tariffic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chart-line"></i> Tariffic</h1>
+                <p>Navigate Tariffs, Optimize Investments</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="watchlist.html" class="active"><i class="fas fa-eye"></i> Watchlist</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Watchlist Overview -->
+                <section class="watchlist-overview">
+                    <div class="overview-card">
+                        <h2>Watchlist Overview</h2>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-label">Total Watched</span>
+                                <span class="metric-value">24</span>
+                                <span class="metric-change positive">+3 this week</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">High Impact</span>
+                                <span class="metric-value">8</span>
+                                <span class="metric-change negative">+2 today</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Avg. Change</span>
+                                <span class="metric-value">-1.2%</span>
+                                <span class="metric-change negative">-0.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Watchlist Table -->
+                <section class="watchlist-table">
+                    <div class="section-header">
+                        <h2><i class="fas fa-list"></i> Your Watchlist</h2>
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search assets...">
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-header">
+                            <div class="col">Asset</div>
+                            <div class="col">Current Price</div>
+                            <div class="col">Change</div>
+                            <div class="col">Tariff Impact</div>
+                            <div class="col">Sector</div>
+                            <div class="col">Actions</div>
+                        </div>
+
+                        <div class="watchlist-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">TechCorp</span>
+                                    <span class="asset-type">Stock</span>
+                                </div>
+                            </div>
+                            <div class="col">$165.80</div>
+                            <div class="col change positive">+10.3%</div>
+                            <div class="col impact negative">High</div>
+                            <div class="col">Technology</div>
+                            <div class="col actions">
+                                <button class="action-btn"><i class="fas fa-chart-line"></i></button>
+                                <button class="action-btn"><i class="fas fa-bell"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="watchlist-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">AutoGlobal</span>
+                                    <span class="asset-type">Stock</span>
+                                </div>
+                            </div>
+                            <div class="col">$78.45</div>
+                            <div class="col change negative">-3.2%</div>
+                            <div class="col impact negative">Medium</div>
+                            <div class="col">Automotive</div>
+                            <div class="col actions">
+                                <button class="action-btn"><i class="fas fa-chart-line"></i></button>
+                                <button class="action-btn"><i class="fas fa-bell"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="watchlist-item">
+                            <div class="col asset">
+                                <div class="asset-info">
+                                    <span class="asset-name">SteelWorks</span>
+                                    <span class="asset-type">Stock</span>
+                                </div>
+                            </div>
+                            <div class="col">$42.15</div>
+                            <div class="col change negative">-7.0%</div>
+                            <div class="col impact negative">High</div>
+                            <div class="col">Manufacturing</div>
+                            <div class="col actions">
+                                <button class="action-btn"><i class="fas fa-chart-line"></i></button>
+                                <button class="action-btn"><i class="fas fa-bell"></i></button>
+                                <button class="action-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tariff Alerts -->
+                <section class="tariff-alerts">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bell"></i> Tariff Alerts</h2>
+                        <button class="view-all">View All</button>
+                    </div>
+
+                    <div class="alerts-list">
+                        <div class="alert-item">
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <span class="alert-type high">High Impact</span>
+                                    <span class="alert-time">2 hours ago</span>
+                                </div>
+                                <h3>New 25% Tariff on Chinese Electronics</h3>
+                                <p>Affects: TechCorp, GlobalTech, Electronics Inc.</p>
+                            </div>
+                            <button class="alert-action">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="alert-item">
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <span class="alert-type medium">Medium Impact</span>
+                                    <span class="alert-time">4 hours ago</span>
+                                </div>
+                                <h3>EU Considers New Tariffs on Electric Vehicles</h3>
+                                <p>Affects: AutoGlobal, EV Motors, GreenAuto</p>
+                            </div>
+                            <button class="alert-action">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tariffic. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
